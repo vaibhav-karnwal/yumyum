@@ -1,6 +1,10 @@
 import React from "react";
-import image from "../assets/home.png"
+import image from "../assets/home.png";
+import { IoCallSharp } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative my-8 bg-white lg:w-full">
       <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
@@ -27,10 +31,21 @@ const Hero = () => {
             <div>
               <button
                 type="button"
+                onClick={() => navigate("/menu")}
                 className="rounded-md bg-yellow px-3 py-2.5 text-sm font-semibold hover:text-white text-black shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
                 Start Searching
               </button>
+            </div>
+            <div className="flex items-center justify-center">
+              <a
+                href="tel:+9058288413"
+                type="button"
+                className="rounded-md bg-yellow px-3 py-2.5 text-sm font-semibold hover:text-white text-black shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black flex items-center gap-2"
+              >
+                <span>For Online Order</span>
+                <IoCallSharp className="text-xl" />
+              </a>
             </div>
           </form>
         </div>
