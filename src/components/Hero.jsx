@@ -1,5 +1,5 @@
 import React from "react";
-
+import image from "../assets/home.png"
 const Hero = () => {
   return (
     <div className="relative my-8 bg-white lg:w-full">
@@ -38,7 +38,7 @@ const Hero = () => {
         <div className="relative px-2 lg:col-span-5 xl:col-span-6 lg:mb-9">
           <img
             className="aspect-[3/2] bg-gray-50 object-cover lg:aspect-[5/3] lg:h-[400px] xl:aspect-[3/1] lg:mt-14 rounded-3xl shadow-2xl "
-            src="https://tb-static.uber.com/prod/image-proc/processed_images/923970e3f1a4bc0f8219205c8c5d40f4/aa13fff7e2466014ca51307be81e7738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            src={image}
             alt=""
           />
         </div>
