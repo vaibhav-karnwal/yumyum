@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CartItems from "../components/CartItems";
-import { whatsappNumber } from "../data/securityData";
+import { whatsappNumber } from "../data/data";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
