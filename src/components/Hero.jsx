@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
             <div className="flex items-center justify-center">
               <a
-                href="tel:+9058288413"
+                href="tel:+7454074319"
                 type="button"
                 className="rounded-md bg-yellow px-3 py-2.5 text-sm font-semibold hover:text-white text-black shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black flex items-center gap-2"
               >
