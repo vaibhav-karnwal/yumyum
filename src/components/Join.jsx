@@ -30,7 +30,7 @@ const Join = () => {
             </p>
             <p>Culinary joy awaits – sign up today!</p>
 
-            <button>
+            <button className="mt-2">
               <Link
                 to={"/signIn"}
                 type="button"
