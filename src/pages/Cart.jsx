@@ -32,7 +32,15 @@ const Cart = () => {
       .join("%0A%0A");
 
     // Ensure text appears before the image URL
-    const sendMessage = `Thank you for ordering from Yum Yum!* 🍽️%0A%0A${message}%0A%0ATotal Amount: ₹${totalPrice}%0A%0AEnjoy your meal! 🎉%0A%0A${companyImageURL}`;
+    const sendMessage = `Thank you for ordering from Yum Yum!* 🍽️%0A%0A${message}%0A%0ATotal Amount: ₹${totalPrice}%0A%0AOrder on ${new Date()
+      .toUTCString()
+      .slice(0, 16)} at ${new Date()
+      .toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      })
+      .toLowerCase()}%0A%0AEnjoy your meal! 🎉%0A%0A${companyImageURL}`;
 
     return sendMessage;
   };

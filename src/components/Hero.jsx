@@ -13,7 +13,9 @@ const Hero = () => {
             <div className="bg-white rounded-full ">
               <p className="text-sm font-medium">Let&apos;s eat</p>
             </div>
-            <p className="text-sm font-medium">Join our Yum Yum &rarr;</p>
+            <p className="text-sm font-medium">
+               &rarr;
+            </p>
           </div>
           <h1 className="mt-8 text-3xl font-normal tracking-tight text-black md:text-4xl lg:text-6xl">
             Order Your
@@ -24,8 +26,10 @@ const Hero = () => {
           </h1>
           <p className="mt-8 text-lg text-gray-700">
             "Satisfy your cravings, elevate your taste. Welcome to{" "}
-            <span className="font-semibold text-yellow">Yum Yum</span>, where
-            every bite is a delight!"
+            <span className="font-semibold text-yellow">
+              Yum <span className="text-yellow">Yum</span>
+            </span>
+            , where every bite is a delight!"
           </p>
           <form action="" className="flex items-start mt-8 space-x-2">
             <div>

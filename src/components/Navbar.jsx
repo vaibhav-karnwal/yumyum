@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="relative w-full px-4 bg-white">
+    <div className="w-full px-4 bg-white">
       <div className="flex items-center justify-between py-2 mx-auto max-w-7xl sm:px-6 lg:px-10">
         <div className="inline-flex items-center space-x-2">
           <div className="flex flex-col justify-between my-5 lg:flex-row">
@@ -62,15 +62,18 @@ const Navbar = () => {
         </div>
 
         {/* Cart Icon */}
-        <div className="relative">
-          <Link to={"/cart"}>
-            <FaShoppingCart className="ml-10 text-xl lg:text-2xl text-yellow lg:-mx-12 md:ml-96 sm:ml-80" />
+        <div className="relative flex flex-row items-center">
+          <Link to={"/cart"} className="mx-2">
+            <FaShoppingCart className="text-xl lg:text-2xl text-yellow lg:-mx-12 md:ml-96 sm:ml-80" />
             {cartItems?.length > 0 && (
               <span className="absolute top-0 right-0 w-5 h-5 text-xs text-grey font-bold rounded-full flex items-center -mt-2">
                 {cartItems?.length}
               </span>
             )}
           </Link>
+          <div className="lg:hidden">
+            <Menu onClick={toggleMenu} className="w-6 h-6 cursor-pointer" />
+          </div>
         </div>
 
         {/* <div className="hidden lg:block">
@@ -85,14 +88,11 @@ const Navbar = () => {
         </div> */}
 
         {/* Mobile Screen */}
-        <div className="lg:hidden">
-          <Menu onClick={toggleMenu} className="w-6 h-6 cursor-pointer" />
-        </div>
+
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform lg:hidden">
             <div className="bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
               <div className="px-5 pt-5 pb-6 flex justify-between">
-                
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
