@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CartItems from "../components/CartItems";
-import { whatsappNumber } from "../data/data";
+import { companyImageURL, whatsappNumber } from "../data/data";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cart);
@@ -21,7 +21,7 @@ const Cart = () => {
   // Generate WhatsApp Message
   const generateWhatsAppMessage = () => {
     if (cartItems.length === 0) return "";
-    console.log(cartItems);
+
     const message = cartItems
       .map(
         (item) =>
@@ -29,9 +29,11 @@ const Cart = () => {
             item.qty * item.price
           }`
       )
-      .join("%0A");
+      .join("%0A%0A");
 
-    const sendMessage = `Hello, I would like to place an order:%0A%0A${message}%0A%0A*Total Amount:* ₹${totalPrice}`;
+    // Ensure text appears before the image URL
+    const sendMessage = `Thank you for ordering from Yum Yum!* 🍽️%0A%0A${message}%0A%0ATotal Amount: ₹${totalPrice}%0A%0AEnjoy your meal! 🎉%0A%0A${companyImageURL}`;
+
     return sendMessage;
   };
 

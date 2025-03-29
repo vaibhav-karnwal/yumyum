@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const Navbar = () => {
     },
   ];
 
+  const cartItems = useSelector((state) => state.cart.cart);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const toggleMenu = () => {
@@ -60,11 +62,16 @@ const Navbar = () => {
         </div>
 
         {/* Cart Icon */}
-        {
+        <div className="relative">
           <Link to={"/cart"}>
-            <FaShoppingCart className="ml-10 text-xl lg:text-2xl lg:-mx-12 md:ml-96 sm:ml-80 " />
+            <FaShoppingCart className="ml-10 text-xl lg:text-2xl text-yellow lg:-mx-12 md:ml-96 sm:ml-80" />
+            {cartItems?.length > 0 && (
+              <span className="absolute top-0 right-0 w-5 h-5 text-xs text-grey font-bold rounded-full flex items-center -mt-2">
+                {cartItems?.length}
+              </span>
+            )}
           </Link>
-        }
+        </div>
 
         {/* <div className="hidden lg:block">
           <Link to={"/signIn"}>
