@@ -25,11 +25,11 @@ const Hero = () => {
             </div>
           </h1>
           <p className="mt-8 text-lg text-gray-700">
-            "Satisfy your cravings, elevate your taste. Welcome to{" "}
+            Satisfy your cravings, elevate your taste. Welcome to{" "}
             <span className="font-semibold text-yellow">
               Yum <span className="text-yellow">Yum</span>
             </span>
-            , where every bite is a delight!"
+            , where every bite is a delight!.
           </p>
           <form action="" className="flex items-start mt-8 space-x-2">
             <div>

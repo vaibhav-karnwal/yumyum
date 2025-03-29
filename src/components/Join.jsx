@@ -10,7 +10,7 @@ const Join = () => {
             <div className="flex justify-center -space-x-2 isolate"></div>
 
             <h2 className="mt-8 text-2xl font-bold leading-tight text-black sm:text-4xl lg:mt-12 lg:text-5xl">
-              Join <span className="border-b-8 border-white">482</span> other
+              Join <span className="border-b-8 lg:border-white border-yellow">482</span> other
               Fooders
             </h2>
             <p className="max-w-xl mx-auto mt-6 text-base text-gray-600 md:mt-10 lg:text-xl italic">

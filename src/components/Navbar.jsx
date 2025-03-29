@@ -64,12 +64,14 @@ const Navbar = () => {
         {/* Cart Icon */}
         <div className="relative flex flex-row items-center">
           <Link to={"/cart"} className="mx-2">
-            <FaShoppingCart className="text-xl lg:text-2xl text-yellow lg:-mx-12 md:ml-96 sm:ml-80" />
-            {cartItems?.length > 0 && (
-              <span className="absolute top-0 right-0 w-5 h-5 text-xs text-grey font-bold rounded-full flex items-center -mt-2">
-                {cartItems?.length}
-              </span>
-            )}
+            <span>
+              <FaShoppingCart className="text-xl lg:text-2xl text-yellow lg:-mx-12 md:ml-96 sm:ml-80" />
+              {cartItems?.length > 0 && (
+                <span className="absolute top-0 right-0 w-10 h-5 text-xs text-red-600 font-bold bg-red-200 rounded-full flex items-center font-bold -mt-2">
+                  {cartItems?.length}
+                </span>
+              )}
+            </span>
           </Link>
           <div className="lg:hidden">
             <Menu onClick={toggleMenu} className="w-6 h-6 cursor-pointer" />
