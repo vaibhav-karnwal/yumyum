@@ -91,19 +91,8 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 p-2 transition origin-top-right transform lg:hidden">
             <div className="bg-white divide-y-2 rounded-lg shadow-lg divide-gray-50 ring-1 ring-black ring-opacity-5">
-              <div className="px-5 pt-5 pb-6">
-                <div className="flex items-center justify-between">
-                  <div className="-mr-2">
-                    <button
-                      type="button"
-                      onClick={toggleMenu}
-                      className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500 "
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <X className="w-6 h-6" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
+              <div className="px-5 pt-5 pb-6 flex justify-between">
+                
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
@@ -119,7 +108,18 @@ const Navbar = () => {
                     ))}
                   </nav>
                 </div>
-
+                <div className="flex mt-4 justify-between">
+                  <div className="-mr-2">
+                    <button
+                      type="button"
+                      onClick={toggleMenu}
+                      className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-100 hover:text-gray-500 "
+                    >
+                      <span className="sr-only">Close menu</span>
+                      <X className="w-6 h-6" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
                 {/* <Link to={"/signIn"}>
                   <button
                     type="button"

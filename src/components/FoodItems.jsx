@@ -18,7 +18,7 @@ const FoodItems = () => {
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />
-      <div className="py-5 mb-20">
+      <div className="py-5 mb-20 px-4">
         <span className="flex items-center justify-center lg:w-full lg:h[100vw] lg:my-14">
           <h1 className="text-2xl font-bold lg:text-5xl">
             Find the <span className="font-serif text-yellow">Best</span> food
