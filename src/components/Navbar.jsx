@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const menuItems = [
     {
       name: "Home",
@@ -28,20 +29,20 @@ const Navbar = () => {
   return (
     <div className="relative w-full px-4 bg-white">
       <div className="flex items-center justify-between py-2 mx-auto max-w-7xl sm:px-6 lg:px-10">
-        <Link to={"/"}>
-          <div className="inline-flex items-center space-x-2">
-            <div className="flex flex-col justify-between my-5 lg:flex-row">
-              <div className="">
-                <span className="text-xl font-thin lg:text-xl">
-                  {new Date().toUTCString().slice(0, 16)}
-                </span>
+        <div className="inline-flex items-center space-x-2">
+          <div className="flex flex-col justify-between my-5 lg:flex-row">
+            <div className="">
+              <span className="text-xl font-thin lg:text-xl">
+                {new Date().toUTCString().slice(0, 16)}
+              </span>
+              <Link to={"/yumyum/"}>
                 <div className="font-bold lg:text-6xl">
                   Yum <span className="text-yellow">Yum</span>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
-        </Link>
+        </div>
 
         <div className="items-start hidden grow lg:flex ">
           <ul className="inline-flex space-x-8 ml-52">

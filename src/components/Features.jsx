@@ -3,7 +3,7 @@ import { DollarSign, Zap, Moon, Filter } from "lucide-react";
 
 const Features = () => {
    return (
-      <div className="px-4 py-5 mx-auto my-10 max-w-7xl sm:px-6 lg:px-8">
+      <div className="px-4 py-5 mx-auto mb-20 max-w-7xl sm:px-6 lg:px-8">
          <div className="max-w-xl mx-auto text-center">
             <h2 className="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
                Yum Yum helps you find

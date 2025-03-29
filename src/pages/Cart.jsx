@@ -21,7 +21,7 @@ const Cart = () => {
   // Generate WhatsApp Message
   const generateWhatsAppMessage = () => {
     if (cartItems.length === 0) return "";
-
+    console.log(cartItems);
     const message = cartItems
       .map(
         (item) =>
