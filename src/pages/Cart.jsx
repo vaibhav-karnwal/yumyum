@@ -43,7 +43,7 @@ const Cart = () => {
     <>
       <Navbar />
 
-      <div className="flex flex-col max-w-3xl mx-auto space-y-4 sm:p-10 sm:px-2 pb-20">
+      <div className="flex flex-col max-w-3xl mx-auto space-y-4 sm:p-10 sm:px-2 pb-32">
         <div className="px-4 md:px-8">
           <h2 className="text-3xl font-bold ">Your cart</h2>
           <p className="mt-3 text-sm font-medium text-gray-700 ">
